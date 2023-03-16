@@ -1,0 +1,21 @@
+<circuit version="1.0.0-RC3" rev="1148" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="864,360" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps itemtype="MCU" CircId="1_mega328-109" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="1_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="capteur_DHT22.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+</item>
+
+<item itemtype="Led" CircId="Led-2" mainComp="false" Show_id="false" Show_Val="false" Pos="748,440" rotation="-180" hflip="1" vflip="1" label="Led-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-3" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="816,464" rotation="0" hflip="1" vflip="1" label="Resistor-3" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Dht22" CircId="Dht22-4" mainComp="false" ShowProp="TempInc" Show_id="false" Show_Val="true" Pos="868,608" rotation="0" hflip="1" vflip="1" label="Dht22-4" idLabPos="-40,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" DHT22="DHT22" TempInc="0.5 °C" HumiInc="5 _%" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Resistor-3-rPin" endpinid="Uno-1-4" pointList="832,464,832,408,872,408" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Resistor-3-lPin" endpinid="Led-2-lPin" pointList="800,464,764,464,764,440" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Led-2-rPin" endpinid="Uno-1-GND2" pointList="732,440,732,496,872,496" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="Uno-1-2" endpinid="Dht22-4-inPin" pointList="872,392,716,392,716,604,832,604" />
+
+</circuit>
