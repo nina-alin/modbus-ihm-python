@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskWebServeur</title>
+</head>
+<body>
+    <form method="post" action="/temperature">
+        <button type="submit">Get current temperature</button>
+    </form>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Captor version</th>
+            <th>Captor date</th>
+            <th>Computer date</th>
+            <th>Temperature</th>
+        </tr>
+        {% for d in data %}
+            <tr>
+              <td>{{ d[0] }}</td>
+              <td>{{ d[1] }}</td>
+              <td>{{ d[2] }}</td>
+              <td>{{ d[3] }}</td>
+              <td>{{ d[4] }}</td>
+              <td>{{ d[5] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
